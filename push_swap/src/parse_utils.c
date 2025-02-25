@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allali <allali@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 18:01:22 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/16 19:03:14 by allali           ###   ########.fr       */
+/*   Updated: 2025/02/18 19:56:09 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,40 +54,4 @@ int	has_duplicates(t_stack *stack)
 		current = current->next;
 	}
 	return (0);
-}
-char	*join_args(int ac, char **av)
-{
-	int i;
-	char *p;
-	char *tmp;
-
-	if (ac < 3)
-		return (ft_strdup(av[1]));
-	p = ft_strdup(av[1]);
-	if (!p)
-		return (NULL);
-	i = 2;
-	while (ac > i)
-	{
-		tmp = p;
-		p = ft_strjoin(tmp, av[i]);
-		free(tmp);
-		if (!p)
-			return (NULL);
-		i++;
-	}
-	return (p);
-	free(p);
-}
-int stack_size(t_stack *stack)
-{
-    int size = 0;
-
-    while (stack)
-    {
-        size++;
-        stack = stack->next;
-    }
-
-    return (size);
 }

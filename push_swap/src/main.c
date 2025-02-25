@@ -3,45 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allali <allali@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 22:53:47 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/16 18:39:55 by allali           ###   ########.fr       */
+/*   Updated: 2025/02/25 11:09:17 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int main(int argc, char **argv)
+// int is_sapace(char *str)
+// {
+// 	int	i;
+
+// 	i = 0;
+// 	while(str[i])
+// 	{
+// 		if (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+// 			return (0);
+// 		i++;
+// 	}
+// 	return (1);
+// }
+int	main(int argc, char **argv)
 {
-    t_stack *stack_a = NULL;
-    t_stack *stack_b = NULL;
+	t_stack	*a;
+	t_stack	*b;
 
-    if (argc < 2)
-        return (1);
-
-    if (!parse_args(argc, argv, &stack_a))
-    {
-        write(2, "Error\n", 6);
-        free_stack(&stack_a);
-        return (1);
-    }
-
-    if (is_sorted(stack_a))
-    {
-        free_stack(&stack_a);
-        return (0);
-    }
-
-    int size = stack_size(stack_a);
-    if (size <= 3)
-        sort_three(&stack_a);
-    else if (size <= 5)
-        sort_five(&stack_a, &stack_b);
-    else
-        radix_sort(&stack_a, &stack_b);
-
-    free_stack(&stack_a);
-    free_stack(&stack_b);
-    return (0);
+	a = NULL;
+	b = NULL;
+	if (argc < 2)
+		return (0);
+	if (!parse_args(argc, argv, &a) || has_duplicates(a))
+	{
+		stack_clear(&a);
+		ft_putstr_fd("Error\n", 2);
+		return (1);
+	}
+	sort_stack(&a, &b);
 }
