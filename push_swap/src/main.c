@@ -6,7 +6,7 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 22:53:47 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/25 11:09:17 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/02/27 13:20:35 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,7 @@ int	main(int argc, char **argv)
 		return (1);
 	}
 	sort_stack(&a, &b);
+	stack_clear(&a);
+	stack_clear(&b);
+	return (0);
 }

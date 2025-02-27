@@ -6,7 +6,7 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 18:20:37 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/24 12:24:00 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/02/27 14:32:42 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ t_stack *find_smallest(t_stack *stack)
 
 void sort_two(t_stack **stack_a)
 {
-    if ((*stack_a)->value > (*stack_a)->next->value)
         sa(stack_a);
 }
 

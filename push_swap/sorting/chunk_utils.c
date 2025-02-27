@@ -6,30 +6,20 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 12:27:41 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/25 10:49:56 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/02/27 12:39:59 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// static int log2_approx(int n)
-// {
-//     int log = 0;
-//     while (n > 1)
-//     {
-//         n /= 2;
-//         log++;
-//     }
-//     return (log);
-// }
+int get_chunk_size(int len)
+{
+    if (len > 100)
+        return (33);
+    else
+        return (16);
+}
 
-// int get_chunk_size(t_stack *stack)
-// {
-//     int size = stack_size(stack);
-//     if (size <= 5)
-//         return (size);
-//     return (size / log2_approx(size));
-// }
 void move_largest_to_top(t_stack **stack_b, t_stack *largest)
 {
     int position = 0;

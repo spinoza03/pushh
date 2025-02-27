@@ -6,7 +6,7 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 14:26:55 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/18 19:22:09 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/02/27 12:46:48 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,7 @@ int	parse_args(int ac, char **av, t_stack **stack_a)
 	i = 1;
 	while (i < ac)
 	{
-		// if (av[i][0] == '"' && av[i][ft_strlen(av[i]) - 1] == '"')
-		// {
-		// 	av[i][ft_strlen(av[i]) - 1] = '\0';
-		// 	av[i] = av[i] + 1;
-		// 	success = process_single_argument(av[i], stack_a);
-		// }
-		// else
-		// {
-			success = process_single_argument(av[i], stack_a);
-		// }
+		success = process_single_argument(av[i], stack_a);
 		if (!success)
 			return (stack_clear(stack_a), 0);
 		i++;
