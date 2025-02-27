@@ -39,6 +39,7 @@ int		is_sorted(t_stack *stack);
 int		get_chunk_size(int size);
 int		*stack_to_sorted_array(t_stack *stack, int size);
 int 	find_position_in_stack(t_stack *stack, int target);
+void index_stack(t_stack **stack);
 
 
 /* Stack Operations */
