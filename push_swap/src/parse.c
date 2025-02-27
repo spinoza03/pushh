@@ -6,7 +6,7 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 14:26:55 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/27 12:46:48 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/02/27 15:58:18 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	process_single_argument(char *arg, t_stack **stack_a)
 	if (arg[0] == '\0') 
 		return (0);
 	arr = ft_split(arg, ' ');
-	if (!arr)
-		return (0);
+	if (!arr || !arr[0])
+		return(free_array(arr), arr = NULL, 0);
 	i = 0;
 	while (arr[i])
 	{
