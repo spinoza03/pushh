@@ -6,7 +6,7 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/19 18:18:18 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/20 18:37:20 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/03/01 00:46:49 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	swap(t_stack **stack)
 	t_stack	*second;
 
 	if (!stack || !*stack || !(*stack)->next)
-		return;
+		return ;
 	first = *stack;
 	second = first->next;
 	first->next = second->next;

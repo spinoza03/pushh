@@ -6,7 +6,7 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:21:58 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/09 15:27:20 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/03/01 12:07:14 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <limits.h>
 
 int		ft_isdigit(int c);
-int	ft_atoi(const char *str, int *error);
+int		ft_atoi(const char *str);
 
 char	**ft_split(const char *s, char c);
 void	ft_putstr_fd(char *s, int fd);

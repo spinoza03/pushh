@@ -6,7 +6,7 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 18:01:22 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/18 19:56:09 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/03/01 12:04:49 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@ void	add_node(t_stack **stack_a, int value)
 
 	new_node = stack_new_node(value);
 	if (!new_node)
-		return;
+		return ;
 	stack_add_back(stack_a, new_node);
 }
-int valid_stack(t_stack *stack)
+
+int	valid_stack(t_stack *stack)
 {
-	t_stack *current;
+	t_stack	*current;
 	int		i;
 
 	i = 0;

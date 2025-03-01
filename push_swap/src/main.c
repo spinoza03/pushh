@@ -6,25 +6,12 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 22:53:47 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/27 13:20:35 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/02/28 18:35:05 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// int is_sapace(char *str)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while(str[i])
-// 	{
-// 		if (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
-// 			return (0);
-// 		i++;
-// 	}
-// 	return (1);
-// }
 int	main(int argc, char **argv)
 {
 	t_stack	*a;
