@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 16:16:25 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/07 22:58:32 by ilallali         ###   ########.fr       */
+/*   Created: 2025/02/07 22:53:47 by ilallali          #+#    #+#             */
+/*   Updated: 2025/03/01 13:39:22 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
-void	ft_putstr_fd(char *s, int fd)
+int	main(int argc, char **argv)
 {
-	int	i;
+	t_stack	*a;
+	t_stack	*b;
 
-	i = 0;
-	if (!s || fd < 0)
-		return ;
-	while (s[i])
+	a = NULL;
+	b = NULL;
+	if (argc < 2)
+		return (0);
+	if (!parse_args(argc, argv, &a) || has_duplicates(a))
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		stack_clear(&a);
+		ft_putstr_fd("Error\n", 2);
+		return (1);
 	}
+	sort_stack(&a, &b);
+	stack_clear(&a);
+	stack_clear(&b);
+	return (0);
 }

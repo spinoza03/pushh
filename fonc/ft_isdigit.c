@@ -6,11 +6,11 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 14:05:26 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/07 12:48:24 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/03/01 13:23:49 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
 int	ft_isdigit(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 14:15:03 by ilallali          #+#    #+#             */
-/*   Updated: 2025/03/01 00:27:43 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/03/01 13:23:43 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
 static int	is_space(char c)
 {

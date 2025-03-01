@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 18:19:47 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/09 14:28:53 by ilallali         ###   ########.fr       */
+/*   Created: 2024/11/07 16:15:56 by ilallali          #+#    #+#             */
+/*   Updated: 2025/03/01 13:23:56 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t				i;
-	unsigned char		*des;
-	unsigned char		*str;
-
-	if (!dst && !src)
-		return (NULL);
-	if (dst == src)
-		return (dst);
-	des = (unsigned char *)dst;
-	str = (unsigned char *)src;
-	i = 0;
-	while (i < n)
-	{
-		des[i] = str[i];
-		i++;
-	}
-	return (dst);
+	if (fd < 0)
+		return ;
+	write(fd, &c, 1);
 }

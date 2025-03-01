@@ -6,11 +6,11 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:02:08 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/07 12:48:49 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/03/01 13:24:03 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
 static int	ft_count_words(const char *str, char c)
 {

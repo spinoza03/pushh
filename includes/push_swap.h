@@ -6,16 +6,14 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/01 12:06:56 by ilallali          #+#    #+#             */
-/*   Updated: 2025/03/01 12:06:59 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/03/01 13:25:08 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "libft.h"
 # include <limits.h>
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 
@@ -25,6 +23,20 @@ typedef struct s_stack
 	int				index;
 	struct s_stack	*next;
 }	t_stack;
+
+int		ft_isdigit(int c);
+int		ft_atoi(const char *str);
+
+char	**ft_split(const char *s, char c);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putnbr_fd(int n, int fd);
+char	*ft_strjoin(char *s1, char *s2);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+char	*ft_strdup(const char *s);
+size_t	ft_strlen(const char *s);
+size_t	ft_strlcpy(char *dst, const char *src, size_t n);
+size_t	ft_strlcat(char *dst, const char *src, size_t n);
 
 int		parse_args(int argc, char **argv, t_stack **stack_a);
 int		is_valid_integer(char *str);

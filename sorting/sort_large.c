@@ -6,33 +6,11 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 18:22:18 by ilallali          #+#    #+#             */
-/*   Updated: 2025/03/01 11:47:50 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/03/01 12:36:38 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-void	index_stack(t_stack **stack)
-{
-	t_stack	*tmp;
-	t_stack	*cmp;
-	int		index;
-
-	tmp = *stack;
-	while (tmp)
-	{
-		cmp = *stack;
-		index = 0;
-		while (cmp)
-		{
-			if (tmp->value > cmp->value)
-				index++;
-			cmp = cmp->next;
-		}
-		tmp->index = index;
-		tmp = tmp->next;
-	}
-}
 
 void	push_chunks(t_stack **stack_a, t_stack **stack_b, int chunk_size)
 {

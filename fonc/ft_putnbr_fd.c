@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 10:31:17 by ilallali          #+#    #+#             */
-/*   Updated: 2025/02/07 12:48:54 by ilallali         ###   ########.fr       */
+/*   Created: 2024/11/07 16:17:52 by ilallali          #+#    #+#             */
+/*   Updated: 2025/03/01 13:23:58 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/push_swap.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	l;
+	long	nb;
 
-	l = 0;
-	while (s[l])
+	if (fd < 0)
+		return ;
+	nb = n;
+	if (nb < 0)
 	{
-		l++;
+		write(fd, "-", 1);
+		nb *= -1;
 	}
-	return (l);
+	if (nb > 9)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putchar_fd((nb % 10) + '0', fd);
+	}
+	else
+		ft_putchar_fd(nb + '0', fd);
 }
