@@ -6,7 +6,7 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 14:26:55 by ilallali          #+#    #+#             */
-/*   Updated: 2025/03/01 11:54:01 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/03/03 01:27:31 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,6 @@ int	parse_args(int ac, char **av, t_stack **stack_a)
 		i++;
 	}
 	if (!valid_stack(*stack_a))
-		return (stack_clear(stack_a), 0);
-	if (has_duplicates(*stack_a))
 		return (stack_clear(stack_a), 0);
 	return (1);
 }

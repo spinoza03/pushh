@@ -6,7 +6,7 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 19:55:16 by ilallali          #+#    #+#             */
-/*   Updated: 2025/03/01 11:56:28 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/03/01 14:35:04 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,19 +66,4 @@ int	stack_size(t_stack *stack)
 		stack = stack->next;
 	}
 	return (size);
-}
-
-int	find_position_in_stack(t_stack *stack, int target)
-{
-	int	position;
-
-	position = 0;
-	while (stack)
-	{
-		if (stack->value == target)
-			return (position);
-		position++;
-		stack = stack->next;
-	}
-	return (-1);
 }

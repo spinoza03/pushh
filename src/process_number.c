@@ -6,7 +6,7 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/09 17:19:23 by ilallali          #+#    #+#             */
-/*   Updated: 2025/03/01 11:56:02 by ilallali         ###   ########.fr       */
+/*   Updated: 2025/03/01 16:33:13 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,12 @@ int	is_valid_integer(char *str)
 int	process_numbers(char *str, t_stack **stack_a)
 {
 	long	num;
+	int		error;
 
 	if (!is_valid_integer(str))
 		return (0);
-	num = ft_atoi(str);
-	if (!num)
+	num = ft_atoi(str, &error);
+	if (!error)
 		return (0);
 	add_node(stack_a, (int)num);
 	return (1);
